@@ -16,6 +16,7 @@ OPENCV_CACHE="$CACHE_DIR/opencv_$OPENCV_PACKAGE_ETAG";
 
 if [ -d "$OPENCV_CACHE" ]; then
   echo "-----> Reusing cached OpenCV ($OPENCV_PACKAGE_ETAG)"
+  mkdir -p $VENDORED_OPENCV
   cp -a $OPENCV_CACHE $VENDORED_OPENCV
 else
   echo "-----> Fetching and caching OpenCV ($OPENCV_PACKAGE_ETAG)"
